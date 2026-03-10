@@ -40,11 +40,11 @@ import { TamirJadvaliModule } from './modules/tamir-jadvali/tamir-jadvali.module
       inject: [ConfigService],
       useFactory: (configService: ConfigService) => ({
         type: 'mysql',
-        host: configService.get('DB_HOST'),
-        port: +configService.get('DB_PORT'),
-        username: configService.get('DB_USERNAME'),
-        password: configService.get('DB_PASSWORD'),
-        database: configService.get('DB_DATABASE'),
+        host: configService.get('MYSQLHOST'),
+        port: +configService.get('MYSQLPORT'),
+        username: configService.get('MYSQLUSER'),
+        password: configService.get('MYSQLPASSWORD'),
+        database: configService.get('MYSQLDATABASE'),
         entities: [__dirname + '/**/*.entity{.ts,.js}'],
         synchronize: true, // development uchun, production'da false qilish kerak
         logging: true,
