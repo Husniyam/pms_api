@@ -42,9 +42,9 @@ import { TamirJadvaliModule } from './modules/tamir-jadvali/tamir-jadvali.module
         type: 'mysql',
         host: configService.get('DB_HOST'),
         port: +configService.get('DB_PORT'),
-        username: configService.get('DB_USER'),
+        username: configService.get('DB_USERNAME'),
         password: configService.get('DB_PASSWORD'),
-        database: configService.get('DB_NAME'),
+        database: configService.get('DB_DATABASE'),
         entities: [__dirname + '/**/*.entity{.ts,.js}'],
         synchronize: true, // development uchun, production'da false qilish kerak
         logging: true,
